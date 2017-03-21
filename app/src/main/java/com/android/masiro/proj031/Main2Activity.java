@@ -65,6 +65,7 @@ public class Main2Activity extends AppCompatActivity {
 
                 t1.setText("0점");
                 t2.setText("0점");
+                i.setVisibility(View.INVISIBLE);
 
                 Toast.makeText(getApplicationContext(),"초기화 되었습니다.",Toast.LENGTH_SHORT).show();
             }
