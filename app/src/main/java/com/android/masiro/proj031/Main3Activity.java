@@ -1,5 +1,6 @@
 package com.android.masiro.proj031;
 
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -124,8 +125,34 @@ public class Main3Activity extends AppCompatActivity {
                     });
                 }
 
+
+                else{
+
+                    b1.setVisibility(View.INVISIBLE);
+                    b2.setVisibility(View.INVISIBLE);
+                    t1.setVisibility(View.INVISIBLE);
+                    c.stop();
+                    c.setBase(SystemClock.elapsedRealtime());
+                    c.setVisibility(View.INVISIBLE);
+                    aPicker.setVisibility(View.INVISIBLE);
+                    tPicker.setVisibility(View.INVISIBLE);
+                    gLayout.setVisibility(View.INVISIBLE);
+                    tLayout.setVisibility(View.INVISIBLE);
+
+                    //TextView t1,t7,t9,t11,t13,t15;
+                    // EditText e1,e2,e3;
+
+                    page = 0;
+                    adult = null; kid = null; junior = null;
+                    year = 2017; month = 3; date = 19;
+                    hour = 1; minute = 1;
+
+                }
+
             }
         });
+
+
 
     }
 
