@@ -37,6 +37,19 @@ public class Main3Activity extends AppCompatActivity {
     int year = 2017,month = 3,date = 19;
     int hour = 1,minute = 1;
 
+    public void OnButton(View v){
+
+        if(v.getId() == R.id.button32){
+            page++;
+            PrintPage(page);
+        }
+        if(v.getId() == R.id.button31){
+
+            page--;
+            PrintPage(page);
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,66 +81,14 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true) {
-                    page =1;
+                    page = 1;
 
                     PrintPage(page);
-
-                    b2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            page++;
-                          PrintPage(page);
-
-                            b1.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    page--;
-                                    PrintPage(page);
-
-                                }
-                            });
-
-                            b2.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    page++;
-                                    PrintPage(page);
-
-                                    b1.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            page--;
-                                            PrintPage(page);
-
-                                        }
-                                    });
-
-                                    b2.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            page++;
-                                           PrintPage(page);
-
-                                            b1.setOnClickListener(new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View v) {
-                                                    page--;
-                                                    PrintPage(page);
-                                                }
-                                            });
-                                        }
-                                    });
-
-                                }
-                            });
-
-                        }
-                    });
                 }
 
 
                 else{
-
+                    page =0;
                     b1.setVisibility(View.INVISIBLE);
                     b2.setVisibility(View.INVISIBLE);
                     t1.setVisibility(View.INVISIBLE);
@@ -141,6 +102,9 @@ public class Main3Activity extends AppCompatActivity {
 
                     //TextView t1,t7,t9,t11,t13,t15;
                     // EditText e1,e2,e3;
+                    e1.setText(null);
+                    e2.setText(null);
+                    e3.setText(null);
 
                     page = 0;
                     adult = null; kid = null; junior = null;
@@ -216,6 +180,7 @@ public class Main3Activity extends AppCompatActivity {
             adult = e1.getText().toString();
             junior = e2.getText().toString();
             kid = e3.getText().toString();
+
 
             t7.setText(year + "." + month + "." + date);
             t9.setText(hour + "시" + minute+"분");

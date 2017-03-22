@@ -162,7 +162,7 @@
         android:visibility="gone"
         android:layout_marginLeft="130dp"
         android:layout_weight="1"
-    app:srcCompat="@drawable/a" />
+        app:srcCompat="@drawable/a" />
 
 </LinearLayout>
 
